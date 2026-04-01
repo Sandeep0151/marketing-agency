@@ -1,5 +1,5 @@
-
 import { Inter, Besley, Space_Grotesk, Playfair_Display, Satisfy, Teko, Phudu, Poppins, Onest } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import GlobalVideoModal from "@/components/Popup/GlobalVideoModal";
 import { VideoProvider } from "@/provider/VideoProvider";
 import AppProvider from "@/provider/AppProvider";
@@ -96,16 +96,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-js agntix-light" suppressHydrationWarning={true}>
-      <body  suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
+      <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}
       ${satisfy.variable} ${teko.variable} ${phudu.variable} ${poppins.variable}
        ${onest.variable}`}>
         <AppProvider>
           <Wrapper>
             <VideoProvider>
-                {children}
+              {children}
             </VideoProvider>
             <GlobalVideoModal />
+            <Analytics />
           </Wrapper>
         </AppProvider>
       </body>

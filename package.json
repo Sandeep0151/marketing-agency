@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@types/jquery": "^3.5.32",
+    "@vercel/analytics": "^2.0.1",
     "atropos": "^2.0.2",
     "bootstrap": "5.3.6",
     "gsap": "^3.13.0",
